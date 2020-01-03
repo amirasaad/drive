@@ -12,6 +12,6 @@ class UsersViewSet(ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
     filter_backends = [filters.SearchFilter]
-    search_fields = ["username", "email"]
+    search_fields = ["email"]
     http_method_names = ["get", "post", "head", "put"]
     permission_classes = [IsAuthenticatedOrCreate]
