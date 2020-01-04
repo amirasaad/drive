@@ -1,6 +1,7 @@
+
 from django.contrib.auth import get_user_model
-from rest_framework import filters
-from rest_framework.viewsets import ModelViewSet
+from rest_framework import mixins
+from rest_framework.viewsets import GenericViewSet
 
 from drive.users.permissions import IsAuthenticatedOrCreate
 from drive.users.serializers import UserSerializer
@@ -8,10 +9,13 @@ from drive.users.serializers import UserSerializer
 User = get_user_model()
 
 
-class UsersViewSet(ModelViewSet):
+class UsersViewSet(
+        GenericViewSet,
+        mixins.CreateModelMixin):
+    """
+    Api endpoint for signup a user.
+    """
+
     queryset = User.objects.all()
     serializer_class = UserSerializer
-    filter_backends = [filters.SearchFilter]
-    search_fields = ["email"]
-    http_method_names = ["get", "post", "head", "put"]
     permission_classes = [IsAuthenticatedOrCreate]
