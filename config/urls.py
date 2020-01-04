@@ -22,8 +22,8 @@ urlpatterns = [
     path(API_PREFIX, include(documents_router.urls)),
 
     path('openapi', get_schema_view(
-        title="Pastebin API",
-        description="Share Your Code",
+        title="Drive API",
+        description="Upload Documents and Metadata",
         version="1.0.0"
     ), name='openapi-schema'),
     path('docs/', TemplateView.as_view(
