@@ -14,6 +14,8 @@ class MetadataViewSet(
     queryset = Metadata.objects.all()
     permission_classes = [IsAuthenticated]
     serializer_class = MetadataSerializer
+    lookup_field = 'name'
+    lookup_url_kwarg = 'name'
 
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
@@ -27,6 +29,8 @@ class DocumentViewSet(
     queryset = Document.objects.all()
     permission_classes = [IsAuthenticated]
     serializer_class = DocumentSerializer
+    lookup_field = 'name'
+    lookup_url_kwarg = 'name'
 
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
