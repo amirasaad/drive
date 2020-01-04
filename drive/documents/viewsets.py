@@ -11,6 +11,10 @@ class MetadataViewSet(
         mixins.ListModelMixin,
         mixins.RetrieveModelMixin,
         GenericViewSet):
+    """
+        Api endpoint for list, retrieve and upload metadata.
+    """
+
     queryset = Metadata.objects.all()
     permission_classes = [IsAuthenticated]
     serializer_class = MetadataSerializer
@@ -26,6 +30,10 @@ class DocumentViewSet(
         mixins.ListModelMixin,
         mixins.RetrieveModelMixin,
         GenericViewSet):
+    """
+    Api endpoint for list, retrieve and upload document.
+    """
+
     queryset = Document.objects.all()
     permission_classes = [IsAuthenticated]
     serializer_class = DocumentSerializer
