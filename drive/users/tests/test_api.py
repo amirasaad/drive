@@ -24,9 +24,7 @@ class ObtainTokenAPITestCase(APITestCase):
 
 class UsersAPITestCase(APITestCase):
     def setUp(self) -> None:
-        self.user = UserFactory()
         self.url = "/api/v1/users/"
-        UserFactory.create_batch(5)
 
     def test_user_can_signup(self):
         data = {
