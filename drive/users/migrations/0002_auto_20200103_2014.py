@@ -6,38 +6,27 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('users', '0001_initial'),
+        ("users", "0001_initial"),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='user',
-            options={'ordering': ['-date_joined']},
+            name="user", options={"ordering": ["-date_joined"]},
         ),
-        migrations.AlterModelManagers(
-            name='user',
-            managers=[
-            ],
-        ),
-        migrations.RemoveField(
-            model_name='user',
-            name='first_name',
-        ),
-        migrations.RemoveField(
-            model_name='user',
-            name='last_name',
-        ),
-        migrations.RemoveField(
-            model_name='user',
-            name='name',
-        ),
-        migrations.RemoveField(
-            model_name='user',
-            name='username',
-        ),
+        migrations.AlterModelManagers(name="user", managers=[],),
+        migrations.RemoveField(model_name="user", name="first_name",),
+        migrations.RemoveField(model_name="user", name="last_name",),
+        migrations.RemoveField(model_name="user", name="name",),
+        migrations.RemoveField(model_name="user", name="username",),
         migrations.AlterField(
-            model_name='user',
-            name='email',
-            field=models.EmailField(db_index=True, error_messages={'unique': 'A user with that email already exists.'}, max_length=254, unique=True, verbose_name='email address'),
+            model_name="user",
+            name="email",
+            field=models.EmailField(
+                db_index=True,
+                error_messages={"unique": "A user with that email already exists."},
+                max_length=254,
+                unique=True,
+                verbose_name="email address",
+            ),
         ),
     ]
