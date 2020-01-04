@@ -1,7 +1,7 @@
 Drive
 =====
 
-Upload documents 
+Upload documents
 
 .. image:: https://img.shields.io/badge/built%20with-Cookiecutter%20Django-ff69b4.svg
      :target: https://github.com/pydanny/cookiecutter-django/
@@ -9,6 +9,9 @@ Upload documents
 .. image:: https://img.shields.io/badge/code%20style-black-000000.svg
      :target: https://github.com/ambv/black
      :alt: Black code style
+
+.. image:: https://travis-ci.org/amirasaad/drive.svg?branch=master
+    :target: https://travis-ci.org/amirasaad/drive
 
 
 :License: MIT
