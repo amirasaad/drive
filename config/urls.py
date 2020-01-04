@@ -7,7 +7,9 @@ from django.views import defaults as default_views
 from rest_framework.schemas import get_schema_view
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
+from drive.documents.urls import documents_router
 from drive.users.urls import users_router
+
 
 API_PREFIX = 'api/v<version>/'
 
@@ -17,6 +19,7 @@ urlpatterns = [
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path(API_PREFIX, include(users_router.urls)),
+    path(API_PREFIX, include(documents_router.urls)),
 
     path('openapi', get_schema_view(
         title="Pastebin API",

@@ -71,7 +71,7 @@ THIRD_PARTY_APPS = [
 
 LOCAL_APPS = [
     "drive.users.apps.UsersConfig",
-    # Your stuff: custom apps go here
+    "drive.documents.apps.DocumentsConfig",
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
