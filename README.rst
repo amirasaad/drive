@@ -16,6 +16,9 @@ Upload documents
 .. image:: https://circleci.com/gh/amirasaad/drive.svg?style=svg
     :target: https://circleci.com/gh/amirasaad/drive
 
+.. image:: https://codecov.io/gh/amirasaad/drive/branch/master/graph/badge.svg
+  :target: https://codecov.io/gh/amirasaad/drive
+
 :License: MIT
 
 
