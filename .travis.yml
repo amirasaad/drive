@@ -14,5 +14,9 @@ python:
   - "3.8"
 install:
   - pip install -r requirements/local.txt
+  - pip install codecov
 script:
-  - "pytest"
+  - coverage run -m pytest
+# Push the results back to codecov
+after_success:
+  - codecov

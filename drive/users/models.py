@@ -17,21 +17,21 @@ class User(AbstractBaseUser, PermissionsMixin):
         error_messages={"unique": _("A user with that email already exists.")},
     )
     # Copied from
-    date_joined = DateTimeField(_('date joined'), default=timezone.now)
+    date_joined = DateTimeField(_("date joined"), default=timezone.now)
 
     is_active = BooleanField(
-        _('active'),
+        _("active"),
         default=True,
         help_text=_(
-            'Designates whether this user should be treated as active. '
-            'Unselect this instead of deleting accounts.'
+            "Designates whether this user should be treated as active. "
+            "Unselect this instead of deleting accounts."
         ),
     )
 
     is_staff = BooleanField(
-        _('staff status'),
+        _("staff status"),
         default=False,
-        help_text=_('Designates whether the user can log into this admin site.'),
+        help_text=_("Designates whether the user can log into this admin site."),
     )
 
     USERNAME_FIELD = "email"
